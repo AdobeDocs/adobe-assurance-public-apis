@@ -1,8 +1,8 @@
 ---
-title: Overview - Cat Analytics
-description: This is the overview page of Cat Analytics
+title: Overview - Adobe Assurance API
+description: Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 contributors:
-  - https://github.com/icaraps 
+  - https://github.com/coljtob 
 ---
 
 <Hero slots="heading, text"/> 
