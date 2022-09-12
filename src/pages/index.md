@@ -7,68 +7,123 @@ contributors:
 
 <Hero slots="heading, text"/> 
 
-# Cat Analytics API
+# Adobe Assurance API
 
-Cat Product API offers limitless ways to integrate your most important customer data into key business processes. Cat Product API offer limitless ways.
+Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 
 <Resources slots="heading, links"/>
 
 #### Resources
 
-* [Quickstart Guide](https://developer.adobe.com)
-* [Cat Analytics Github Repo](https://github.com/AdobeDocs/dev-site)
+* [Adobe Experience Platform Assurance](https://aep-sdks.gitbook.io/docs/assurance/project-griffon)
 
 ## Overview
 
-This documentation provides instructions for Catt Analytics 2.0 APIs. For working with Cat Analytics APIs, see [Cat Analytics API Documentation](https://github.com/AdobeDocs/dev-site).
+This documentation provides instructions for Adobe Assurance 1.0 APIs. For working with Adobe Experience Platform Assurance, see [refer here](https://aep-sdks.gitbook.io/docs/assurance/project-griffon).
 
-The Cat Analytics APIs are a collection of APIs that power Cat Analytics products like Cat Workspace. 
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+The Adobe Assurance APIs are a collection of APIs that empower users to test and debug their mobiles apps, when outfitted with the Adobe Assurance Mobile SDK. 
+When enabled, the user of these APIs will be able to:
 
-## Discover 
+- create, read, and delete sessions
+- read events
+- read event annotations
+- read session annotations
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
+The guide will demonstrate how you can utilize Adobe Assurance APIs to programmatically connect your Adobe Assurance enabled mobile application to our back end services to help you develop and debug your application.
 
-### Get Started
+In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations here.
 
-[Quickstart Guide](guides/)
-    
-Get started with the Cat Analytics APIs.
+## Creating A Project
+If you do not already have a project defined in your organization, go ahead and create one "Create new project".
+![](guides/session_api/create_project.png)
 
-<DiscoverBlock slots="heading, link, text"/> 
+## Adding Adobe Assurance API
 
-### Guides
+Within your project home page, click "Add API" and choose "TBD", and then "Adobe Assurance API".
+![](guides/session_api/add_api.png)
+![](guides/session_api/product_filter.png)
+![](guides/session_api/assurance_api_plugin.png)
 
-[Calculated Metrics API](guides/calculated_metrics_api/) 
-     
-Returns information on the user's company that is necessary for making other Cat Analytics API calls.
+# Public-Private Key Pairs
+You will be prompted to generate or upload a public/private key pair. As a first, easy exercise, choose "Generate Key Pair".
+![](guides/session_api/jwt_account.png)
+![](guides/session_api/generate_keypair.png)
 
-<DiscoverBlock slots="link, text"/>
+A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key".
 
-[Segments API](guides/segments_api/) 
+Click "Next".
+(Not sure about Product Profile?)
+Click "Save configured" API.
 
-Provides configuration guidance and best practices for the /segments endpoint.
+# Generating a JWT (JSON Web Token)
 
-<DiscoverBlock slots="link, text"/>
+Now with you project defined, and associated with Assurance API, with a public/private key pair, you can generate a JWT.
 
-[Reporting Guide API](guides/reporting_api/)
+These JSON Web Tokens can be generated within this UI, or using [several tools/libraries](https://jwt.io/libraries).
 
-Provides configuration guidance and best practices for the /reports endpoint.
+Paste the entire contents of your private key that was downloaded in an earlier step into the "Private key" text box.
+![](guides/session_api/paste_key.png)
 
-<DiscoverBlock slots="link, text"/>
+## Status Check
 
-[Migrating from 1.4 to 2.0](guides/migrating/)
+Now you should have created/defined:
 
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.   
+An access token generated from your unique JSON Web Token
+- Client ID
+- Client Secret
+- Technical Account ID
+- Technical Account Email
+- Organization ID
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
+## Regenerating JWT-exchanged Access Tokens
+To regenerate an access token, within your project, you can always click on "Credentials / Service Account (JWT)".
 
-### API References
+Click on "Generate JWT" tab, again paste your private key in the available text box, and choose "Generate Token".
 
-[Try the API](api/) 
+In this flow, instead of being presented a ready-to-use access token, you will be presented with your actual JSON Web Token, and a sample cURL command to use that JWT in exchange for an access token.
+![](guides/session_api/regenerate.png)
 
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
+Copy and paste the cURL command into your terminal and execute.
+
+An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
+
+
+## Try the API 
+
+### Read Sessions:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  sessions {\n   \tname\n    uuid\n  }\n}"}' --compressed
+
+### Create a Session:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary  '{"query":"mutation name($session: SessionInput!) {\n  createSession(session: $session) {\n    orgId\n    uuid\n    name\n    link\n    token\n    firstName\n    lastName\n    createdById\n  }\n}"}' --compressed
+
+### Read Session Annotations:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  sessions {\n    uuid\n    token\n    name\n    firstName\n    lastName\n    updatedById\n    updatedTs\n    annotations {\n      payload\n    }\n  }\n}"}' --compressed
+
+### Delete a Session:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"mutation name($uuid: UUID!) {\n  deleteSession(uuid:$uuid)\n}"}' --compressed
+
+### Read Events:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){\n    uuid\n    clientId\n    timestamp\n    vendor\n    type\n    payload\n  }\n}"}' --compressed
+
+### Read Events with Annotations:
+
+curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary --data-binary '{"query":"query {\n  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){\n    uuid\n    clientId\n    timestamp\n    vendor\n    type\n    payload\n    annotations {\n      namespace\n      payload\n    }\n  }\n}"}' --compressed
+
+## GLOSSARY OF TERMS
+
+- Access Token: An expiring token that must be sent in the header value for 'Authorization' in the form -H 'Authorization: Bearer [access token value]'
+- Adobe Assurance: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
+- Adobe Developer's Console: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, Runtime functions, and plugin IDs
+- Client ID: Identifies which user or entity is gaining access to an Adobe Resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
+- Client Secret: Confirms the entity using the Client ID is authorized to do so.
+- JSON Web Token (JWT): a method for representing claims securely between two parties
+- Organization ID: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
+- Public/Private Key Pair: helps to encrypt information that ensures data is protected during transmission
 
 ## Contributing 
 
