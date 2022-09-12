@@ -1,6 +1,6 @@
 ---
-title: Support - Cat Analytics
-description: This is the support page of Cat Analytics 
+title: Support - Adobe Assurance Analytics
+description: This is the support page of Adobe Assurance
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>

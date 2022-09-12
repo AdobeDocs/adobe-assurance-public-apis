@@ -1,6 +1,6 @@
 ---
-title: Guides - Cat Analytics
-description: This is the guides overview page of Cat Analytics 
+title: Guides - Adobe Assurance APIs
+description: This is the guides overview page of Adobe Assurance APIs
 ---
 
 # Get Started

@@ -1,5 +1,4 @@
 ---
-title: Cat API Spec 2.0
-description: Cat API Spec 2.0
-openAPISpec:  /petstore.json
+title: Adobe Assurance API Spec 1.0
+description: Adobe Assurance API Spec 1.0
 --- 
