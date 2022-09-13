@@ -11,7 +11,7 @@
  */
 
 module.exports = {
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/',
+  pathPrefix: process.env.PATH_PREFIX || '/adobe-assurance-public-apis/',
   siteMetadata: {
     versions: [
       {
@@ -19,8 +19,8 @@ module.exports = {
         selected: true
       },
       {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/dev-site'
+        title: 'v1.0',
+        path: 'https://github.com/AdobeDocs/adobe-assurance-public-apis'
       }
     ],
     pages: [
