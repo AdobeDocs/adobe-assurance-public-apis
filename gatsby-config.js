@@ -16,11 +16,8 @@ module.exports = {
     versions: [
       {
         title: 'v1.0',
+        path: 'https://github.com/AdobeDocs/adobe-assurance-public-apis',
         selected: true
-      },
-      {
-        title: 'v1.0',
-        path: 'https://github.com/AdobeDocs/adobe-assurance-public-apis'
       }
     ],
     pages: [
