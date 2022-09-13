@@ -47,7 +47,7 @@ Within your project home page, click "Add API" and choose "TBD", and then "Adobe
 ![](guides/session_api/product_filter.png)
 ![](guides/session_api/assurance_api_plugin.png)
 
-# Public-Private Key Pairs
+## Public-Private Key Pairs
 You will be prompted to generate or upload a public/private key pair. As a first, easy exercise, choose "Generate Key Pair".
 ![](guides/session_api/jwt_account.png)
 ![](guides/session_api/generate_keypair.png)
@@ -58,7 +58,7 @@ Click "Next".
 (Not sure about Product Profile?)
 Click "Save configured" API.
 
-# Generating a JWT (JSON Web Token)
+## Generating a JWT (JSON Web Token)
 
 Now with you project defined, and associated with Assurance API, with a public/private key pair, you can generate a JWT.
 
