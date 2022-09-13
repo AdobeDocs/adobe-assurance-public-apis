@@ -33,6 +33,9 @@ The guide will demonstrate how you can utilize Adobe Assurance APIs to programma
 
 In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations here.
 
+## Granting Access
+Within the [Admin Console](https://adminconsole.adobe.com/), administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Adobe Assurance API" to those projects.
+
 ## Creating A Project
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
 ![](guides/session_api/create_project.png)

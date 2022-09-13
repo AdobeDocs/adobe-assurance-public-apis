@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     versions: [
       {
-        title: 'v2.0',
+        title: 'v1.0',
         selected: true
       },
       {
@@ -25,7 +25,7 @@ module.exports = {
     ],
     pages: [
       {
-        title: 'Cat Analytics',
+        title: 'Adobe Assurance API',
         path: '/'
       },
       {
@@ -36,13 +36,13 @@ module.exports = {
         title: 'API Reference',
         menu: [
           {
-            title: 'Cat Reference v2.0',
-            description: 'Cat Reporting API',
+            title: 'Assurance API Reference v1.0',
+            description: 'Assurance API',
             path: '/api/index.md'
           },
           {
-            title: 'Cat Reference v1.4',
-            description: 'Cat API Spec',
+            title: 'Assurance API Reference v1.0',
+            description: 'Assurance API Spec',
             path: '/api/1.4.md'
           }
         ]
@@ -68,7 +68,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Cat Metrics API',
+        title: 'Assurance Metrics API',
         path: '/guides/dummy_metrics_api/'
       },
       {
