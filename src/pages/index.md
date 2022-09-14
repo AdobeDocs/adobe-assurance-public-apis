@@ -31,31 +31,34 @@ When enabled, the user of these APIs will be able to:
 
 The guide will demonstrate how you can utilize Adobe Assurance APIs to programmatically connect your Adobe Assurance enabled mobile application to our back end services to help you develop and debug your application.
 
-In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations here.
+In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations [here](https://jwt.io/).
 
 ## Granting Access
-Within the [Admin Console](https://adminconsole.adobe.com/), administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Adobe Assurance API" to those projects.
+Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Adobe Assurance API" to those projects.
 
 ## Creating A Project
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
+
 ![](guides/session_api/create_project.png)
 
 ## Adding Adobe Assurance API
 
-Within your project home page, click "Add API" and choose "TBD", and then "Adobe Assurance API".
+Within your project home page, click "Addd API", filter by "Adobe Experience Platform", and click "Assurance".
+
 ![](guides/session_api/add_api.png)
 ![](guides/session_api/product_filter.png)
 ![](guides/session_api/assurance_api_plugin.png)
 
 ## Public-Private Key Pairs
-You will be prompted to generate or upload a public/private key pair. As a first, easy exercise, choose "Generate Key Pair".
+You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
+
 ![](guides/session_api/jwt_account.png)
 ![](guides/session_api/generate_keypair.png)
 
-A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key".
+A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key" to your clipboard.
 
 Click "Next".
-(Not sure about Product Profile?)
+Choose applicable Product Profile if requested.
 Click "Save configured" API.
 
 ## Generating a JWT (JSON Web Token)
@@ -65,6 +68,7 @@ Now with you project defined, and associated with Assurance API, with a public/p
 These JSON Web Tokens can be generated within this UI, or using [several tools/libraries](https://jwt.io/libraries).
 
 Paste the entire contents of your private key that was downloaded in an earlier step into the "Private key" text box.
+
 ![](guides/session_api/paste_key.png)
 
 ## Status Check
@@ -84,12 +88,12 @@ To regenerate an access token, within your project, you can always click on "Cre
 Click on "Generate JWT" tab, again paste your private key in the available text box, and choose "Generate Token".
 
 In this flow, instead of being presented a ready-to-use access token, you will be presented with your actual JSON Web Token, and a sample cURL command to use that JWT in exchange for an access token.
+
 ![](guides/session_api/regenerate.png)
 
 Copy and paste the cURL command into your terminal and execute.
 
 An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
-
 
 ## Try the API 
 
