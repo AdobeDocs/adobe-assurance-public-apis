@@ -26,21 +26,12 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'Guides',
-        path: '/guides/'
-      },
-      {
         title: 'API Reference',
         menu: [
           {
             title: 'Assurance API Reference v1.0',
             description: 'Assurance API',
             path: '/api/index.md'
-          },
-          {
-            title: 'Assurance API Reference v1.0',
-            description: 'Assurance API Spec',
-            path: '/api/1.4.md'
           }
         ]
       },

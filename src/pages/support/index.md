@@ -1,51 +1,79 @@
 ---
-title: Support - Adobe Assurance Analytics
-description: This is the support page of Adobe Assurance
+title: Assurance 1.0 API support
+description: Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
 
-# Support
+# Assurance 1.0 API support
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
-## Feedback
+## Communities
 
-You've got a place to start discussions.
+Adobe actively participates in several communities. You can use any of the following communities for their designated purpose.
 
 <DiscoverBlock slots="image, heading, link, text" width="25%"/>
 
-![Cat Experience Cloud](experience_cloud.png)
+![Adobe Experience Cloud](./../images/experience_cloud.png)
 
-### Developer forum
+### Adobe Experience League
 
-[Get started](https://adobe.io)
+[Experience Platform Community forum](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community)
 
-Open discussion and support with community experts and Adobe staff.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Experience league](https://adobe.io) 
-
-Tutorials and videos for the whole community.
+Ask/answer questions, participate in discussions, or submit ideas around the Assurance 1.0 APIs.
 
 <DiscoverBlock slots="link, text" width="25%"/>
 
-[Experience forum](https://adobe.io) 
+[Adobe Developer forum](https://experienceleaguecommunities.adobe.com/t5/adobe-i-o-console/ct-p/adobe-io-console)
 
-Forum to get help and help others
+Ask/answer questions or participate in discussions around the Adobe Developer console.
 
-## Community
+<DiscoverBlock slots="image, heading, link, text" width="25%"/>
 
-You've got a place to join the conversation.
+![GitHub](./../images/github.png)
 
-<DiscoverBlock slots="image, heading, link, text" width="100%"/>
+### GitHub
 
-![Stack Overflow](stack-overflow.png)
+[Contributing](https://github.com/AdobeDocs/adobe-assurance-public-apis/blob/main/.github/CONTRIBUTING.md)
+
+Learn how you can contribute to the Assurance 1.0 API documentation.
+
+<DiscoverBlock slots="link, text" width="25%"/>
+
+[Issues](https://github.com/AdobeDocs/adobe-assurance-public-apis/issues)
+
+Submit an issue to the repo for Adobe to address.
+
+<DiscoverBlock slots="link, text" width="25%"/>
+
+[Pull requests](https://github.com/AdobeDocs/adobe-assurance-public-apis/pulls)
+
+View open pull requests for the repository.
+
+<DiscoverBlock slots="image, heading, link, text" width="25%"/>
+
+![Slack](./../images/slack.png)
+
+### Slack
+
+[Request an invite](https://join.measure.chat)
+
+Submission form to request joining #Measure, an industry-wide slack channel for multiple assurance platforms (?)
+
+<DiscoverBlock slots="link, text" width="25%"/>
+
+(what shoud assurance slack channel be?)
+[Measure slack](https://measure.slack.com/messages/adobe-assurance)
+
+The #adobe-analytics channel within Measure Slack.
+
+<DiscoverBlock slots="image, heading, link, text" width="25%"/>
+
+![Stack Overflow](./../images/stack-overflow.png)
 
 ### Stack Overflow
 
-[Explore](https://adobe.io)
-
-Developer Q&A using a specific tag.
-
+[Tagged questions](https://stackoverflow.com/questions/tagged/adobe-assurance)
+(how to register a tag?)
+Ask/answer developer questions tagged `[adobe-assurance]`.

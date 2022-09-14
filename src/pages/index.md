@@ -39,21 +39,21 @@ Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will
 ## Creating A Project
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
 
-![](guides/session_api/create_project.png)
+![](images/create_project.png)
 
 ## Adding Adobe Assurance API
 
 Within your project home page, click "Addd API", filter by "Adobe Experience Platform", and click "Assurance".
 
-![](guides/session_api/add_api.png)
-![](guides/session_api/product_filter.png)
-![](guides/session_api/assurance_api_plugin.png)
+![](images/add_api.png)
+![](images/product_filter.png)
+![](images/assurance_api_plugin.png)
 
 ## Public-Private Key Pairs
 You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
 
-![](guides/session_api/jwt_account.png)
-![](guides/session_api/generate_keypair.png)
+![](images/jwt_account.png)
+![](images/generate_keypair.png)
 
 A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key" to your clipboard.
 
@@ -69,7 +69,7 @@ These JSON Web Tokens can be generated within this UI, or using [several tools/l
 
 Paste the entire contents of your private key that was downloaded in an earlier step into the "Private key" text box.
 
-![](guides/session_api/paste_key.png)
+![](images/paste_key.png)
 
 ## Status Check
 
@@ -89,37 +89,12 @@ Click on "Generate JWT" tab, again paste your private key in the available text 
 
 In this flow, instead of being presented a ready-to-use access token, you will be presented with your actual JSON Web Token, and a sample cURL command to use that JWT in exchange for an access token.
 
-![](guides/session_api/regenerate.png)
+![](images/regenerate.png)
 
 Copy and paste the cURL command into your terminal and execute.
 
 An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
 
-## Try the API 
-
-### Read Sessions:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  sessions {\n   \tname\n    uuid\n  }\n}"}' --compressed
-
-### Create a Session:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary  '{"query":"mutation name($session: SessionInput!) {\n  createSession(session: $session) {\n    orgId\n    uuid\n    name\n    link\n    token\n    firstName\n    lastName\n    createdById\n  }\n}"}' --compressed
-
-### Read Session Annotations:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  sessions {\n    uuid\n    token\n    name\n    firstName\n    lastName\n    updatedById\n    updatedTs\n    annotations {\n      payload\n    }\n  }\n}"}' --compressed
-
-### Delete a Session:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"mutation name($uuid: UUID!) {\n  deleteSession(uuid:$uuid)\n}"}' --compressed
-
-### Read Events:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {\n  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){\n    uuid\n    clientId\n    timestamp\n    vendor\n    type\n    payload\n  }\n}"}' --compressed
-
-### Read Events with Annotations:
-
-curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'DNT: 1' -H 'Origin: file://' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary --data-binary '{"query":"query {\n  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){\n    uuid\n    clientId\n    timestamp\n    vendor\n    type\n    payload\n    annotations {\n      namespace\n      payload\n    }\n  }\n}"}' --compressed
 
 ## GLOSSARY OF TERMS
 
@@ -131,12 +106,6 @@ curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate
 - JSON Web Token (JWT): a method for representing claims securely between two parties
 - Organization ID: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
 - Public/Private Key Pair: helps to encrypt information that ensures data is protected during transmission
-
-## Contributing 
-
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
 
 ## API Requests & Rate Limits
 
