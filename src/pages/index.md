@@ -140,7 +140,7 @@ request with your contribution. For more information, refer to the [contributing
 
 ## API Requests & Rate Limits
 
-The timeout for API requests through adobe.io is currently *60 seconds*.
+The timeout for API requests through adobe.io is currently *xxx seconds*.
 
-The default rate limit for an Adobe Assurance API is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
+The default rate limit for an Adobe Assurance API is *xxx requests per minute*. 
 When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    
