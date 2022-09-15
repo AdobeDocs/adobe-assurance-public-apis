@@ -43,16 +43,19 @@ If you do not already have a project defined in your organization, go ahead and 
 
 ## Adding Adobe Assurance API
 
-Within your project home page, click "Addd API", filter by "Adobe Experience Platform", and click "Assurance".
+Within your project home page, click "Add API", filter by "Adobe Experience Platform", and click "Assurance".
 
 ![](images/add_api.png)
+
 ![](images/product_filter.png)
+
 ![](images/assurance_api_plugin.png)
 
 ## Public-Private Key Pairs
 You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
 
 ![](images/jwt_account.png)
+
 ![](images/generate_keypair.png)
 
 A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key" to your clipboard.
@@ -98,18 +101,12 @@ An access token will be returned in your terminal window with an expiration. (ch
 
 ## GLOSSARY OF TERMS
 
-- Access Token: An expiring token that must be sent in the header value for 'Authorization' in the form -H 'Authorization: Bearer [access token value]'
-- Adobe Assurance: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
-- Adobe Developer's Console: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, Runtime functions, and plugin IDs
-- Client ID: Identifies which user or entity is gaining access to an Adobe Resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
-- Client Secret: Confirms the entity using the Client ID is authorized to do so.
-- JSON Web Token (JWT): a method for representing claims securely between two parties
-- Organization ID: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
-- Public/Private Key Pair: helps to encrypt information that ensures data is protected during transmission
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *xxx seconds*.
-
-The default rate limit for an Adobe Assurance API is *xxx requests per minute*. 
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    
+- **Access Token**: An expiring token that must be sent in the header value for 'Authorization' in the form -H 'Authorization: Bearer [access token value]'
+- **Adobe Assurance**: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
+- **Adobe Developer's Console**: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, Runtime functions, and plugin IDs
+- **Client ID**: Identifies which user or entity is gaining access to an Adobe Resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
+- **Client Secret**: Confirms the entity using the Client ID is authorized to do so.
+- **JSON Web Token (JWT)**: a method for representing claims securely between two parties
+- **Organization ID**: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
+- **Public/Private Key Pair**: helps to encrypt information that ensures data is protected during transmission
+ 
