@@ -1,11 +1,10 @@
 ---
-title: Assurance 1.0 API support
+title: Assurance 1.0 API Support
 description: Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 ---
+<Hero slots="heading, text"/> 
 
-<Hero slots="heading, text" background="rgb(19, 93, 183)"/>
-
-# Assurance 1.0 API support
+# Assurance API Support
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
@@ -57,16 +56,9 @@ View open pull requests for the repository.
 
 ### Slack
 
-[Request an invite](https://join.measure.chat)
+[Request an invite](https://projectgriffon.slack.com)
 
-Submission form to request joining #Measure, an industry-wide slack channel for multiple assurance platforms (?)
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-(what shoud assurance slack channel be?)
-[Measure slack](https://measure.slack.com/messages/adobe-assurance)
-
-The #adobe-analytics channel within Measure Slack.
+Join our Project Griffon Slack Support Channel.
 
 <DiscoverBlock slots="image, heading, link, text" width="25%"/>
 

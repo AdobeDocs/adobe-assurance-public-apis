@@ -13,87 +13,25 @@
 module.exports = {
   pathPrefix: process.env.PATH_PREFIX || '/adobe-assurance-public-apis/',
   siteMetadata: {
-    versions: [
-      {
-        title: 'v1.0',
-        path: 'https://github.com/AdobeDocs/adobe-assurance-public-apis',
-        selected: true
-      }
-    ],
     pages: [
       {
-        title: 'Adobe Assurance API',
+        title: 'Adobe Assurance Getting Started',
         path: '/'
       },
       {
-        title: 'API Reference',
-        menu: [
-          {
-            title: 'Assurance API Reference v1.0',
-            description: 'Assurance API',
-            path: '/api/index.md'
-          }
-        ]
+        title: 'API',
+        path: '/api/'
       },
+      {
+        title: 'Usage',
+        path: '/usage/'
+      }
+      ,
       {
         title: 'Support',
         path: '/support/'
       }
     ],
-    subPages: [
-      {
-        title: 'Get Started',
-        path: '/guides/',
-        pages: [
-          {
-            title: 'Dummy an OAuth Client',
-            path: '/guides/dummy_oauth_client/'
-          },
-          {
-            title: 'Dummy OAuth using POSTMAN',
-            path: '/guides/dummy_using_postman/'
-          }
-        ]
-      },
-      {
-        title: 'Assurance Metrics API',
-        path: '/guides/dummy_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
-      },
-      {
-        title: 'Overview',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
-      }
-    ]
   },
   plugins: [`@adobe/gatsby-theme-aio`]
 };

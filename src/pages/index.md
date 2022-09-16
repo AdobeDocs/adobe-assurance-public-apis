@@ -7,7 +7,7 @@ contributors:
 
 <Hero slots="heading, text"/> 
 
-# Adobe Assurance API
+# Assurance API
 
 Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 
@@ -39,24 +39,24 @@ Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will
 ## Creating A Project
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
 
-![](images/create_project.png)
+![Create New Project](images/create_project.png)
 
 ## Adding Adobe Assurance API
 
 Within your project home page, click "Add API", filter by "Adobe Experience Platform", and click "Assurance".
 
-![](images/add_api.png)
+![Add API](images/add_api.png)
 
-![](images/product_filter.png)
+![Product Filter](images/product_filter.png)
 
-![](images/assurance_api_plugin.png)
+![Adobe Assurance](images/assurance_api_plugin.png)
 
 ## Public-Private Key Pairs
 You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
 
-![](images/jwt_account.png)
+![JSON Web Token](images/jwt_account.png)
 
-![](images/generate_keypair.png)
+![Generate Key Pair](images/generate_keypair.png)
 
 A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key" to your clipboard.
 
@@ -72,7 +72,7 @@ These JSON Web Tokens can be generated within this UI, or using [several tools/l
 
 Paste the entire contents of your private key that was downloaded in an earlier step into the "Private key" text box.
 
-![](images/paste_key.png)
+![Paste Private Key](images/paste_key.png)
 
 ## Status Check
 
@@ -92,7 +92,7 @@ Click on "Generate JWT" tab, again paste your private key in the available text 
 
 In this flow, instead of being presented a ready-to-use access token, you will be presented with your actual JSON Web Token, and a sample cURL command to use that JWT in exchange for an access token.
 
-![](images/regenerate.png)
+![Regenerate Key](images/regenerate.png)
 
 Copy and paste the cURL command into your terminal and execute.
 
