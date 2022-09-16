@@ -1,6 +1,6 @@
 ---
-title: Adobe Assurance API Spec 1.0
-description: Adobe Assurance API Spec 1.0
+title: Assurance API Spec 1.0
+description: Assurance API Spec 1.0
 --- 
 
 <Hero slots="heading, text"/> 

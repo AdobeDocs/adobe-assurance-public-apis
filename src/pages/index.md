@@ -1,5 +1,5 @@
 ---
-title: Overview - Adobe Assurance API
+title: Overview - Assurance API
 description: Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 contributors:
   - https://github.com/coljtob 
@@ -19,9 +19,9 @@ Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 
 ## Overview
 
-This documentation provides instructions for Adobe Assurance 1.0 APIs. For working with Adobe Experience Platform Assurance, see [refer here](https://aep-sdks.gitbook.io/docs/assurance/project-griffon).
+This documentation provides instructions for Assurance 1.0 APIs. For working with Adobe Experience Platform Assurance, see [refer here](https://aep-sdks.gitbook.io/docs/assurance/project-griffon).
 
-The Adobe Assurance APIs are a collection of APIs that empower users to test and debug their mobiles apps, when outfitted with the Adobe Assurance Mobile SDK. 
+The Assurance APIs are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK. 
 When enabled, the user of these APIs will be able to:
 
 - create, read, and delete sessions
@@ -29,19 +29,19 @@ When enabled, the user of these APIs will be able to:
 - read event annotations
 - read session annotations
 
-The guide will demonstrate how you can utilize Adobe Assurance APIs to programmatically connect your Adobe Assurance enabled mobile application to our back end services to help you develop and debug your application.
+The guide will demonstrate how you can utilize Assurance APIs to programmatically connect your Adobe Assurance enabled mobile application to our back end services to help you develop and debug your application.
 
 In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations [here](https://jwt.io/).
 
 ## Granting Access
-Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Adobe Assurance API" to those projects.
+Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Assurance" to those projects.
 
 ## Creating A Project
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
 
 ![Create New Project](images/create_project.png)
 
-## Adding Adobe Assurance API
+## Adding Assurance API
 
 Within your project home page, click "Add API", filter by "Adobe Experience Platform", and click "Assurance".
 
@@ -49,7 +49,7 @@ Within your project home page, click "Add API", filter by "Adobe Experience Plat
 
 ![Product Filter](images/product_filter.png)
 
-![Adobe Assurance](images/assurance_api_plugin.png)
+![Assurance](images/assurance_api_plugin.png)
 
 ## Public-Private Key Pairs
 You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
@@ -102,7 +102,7 @@ An access token will be returned in your terminal window with an expiration. (ch
 ## GLOSSARY OF TERMS
 
 - **Access Token**: An expiring token that must be sent in the header value for 'Authorization' in the form -H 'Authorization: Bearer [access token value]'
-- **Adobe Assurance**: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
+- **Assurance**: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
 - **Adobe Developer's Console**: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, Runtime functions, and plugin IDs
 - **Client ID**: Identifies which user or entity is gaining access to an Adobe Resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
 - **Client Secret**: Confirms the entity using the Client ID is authorized to do so.
