@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'Adobe Assurance Getting Started',
+        title: 'Assurance Getting Started',
         path: '/'
       },
       {
