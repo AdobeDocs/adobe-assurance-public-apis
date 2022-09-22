@@ -6,33 +6,85 @@ description: Assurance API Usage
 
 # Assurance API Usage
 
-Commands for queries/mutations
+cURL command examples for queries/mutations
 
-### Read Sessions:
+## Queries
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {  sessions {   name    uuid  }}"}'`
+### Read Sessions
 
-### Create a Session:
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"query { sessions { uuid name }}"}'
+```
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"mutation name($session: SessionInput!) {  createSession(session: $session) {    orgId    uuid    name    link    token    firstName    lastName    createdById  }}","variables":{"session":{"name":"test-mutation","link":"testUrl://default"}}}'`
+### Read Session Annotations
 
-### Update a Session:
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"query { sessions { uuid name annotations { payload } }}"}'
+```
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"mutation name($session: SessionInput!) {  updateSession(session: $session) {    orgId    uuid    name    link    firstName    lastName    createdById  }}","variables":{"session":{"uuid":"[session UUID]","name":"session-renamed","link":"myNewUrl://default"}}}'`
+### Read Events
 
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"query {  events(sessionUuid:\"[session UUID]\",_page:0,_size:50){ uuid clientId timestamp vendor type payload }}"}'
+```
 
-### Read Session Annotations:
+### Read Events with Annotations
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {  sessions {    uuid    token    name    firstName    lastName    updatedById    updatedTs    annotations {      payload    }  }}"}'`
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"query {  events(sessionUuid:\"[session UUID]\",_page:0,_size:50){ uuid clientId timestamp vendor type payload annotations { namespace payload }}}"}'
+```
 
-### Delete a Session:
+## Mutations
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"mutation name($uuid: UUID!) {  deleteSession(uuid:$uuid)}"}'`
+### Create a Session
 
-### Read Events:
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"mutation createSession($session: SessionInput!) { createSession(session: $session) { orgId uuid name link token }}","variables":{"session":{"name":"test-mutation","link":"testUrl://default"}}}'
+```
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary '{"query":"query {  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){    uuid    clientId    timestamp    vendor    type    payload  }}"}'`
+### Update a Session
 
-### Read Events with Annotations:
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"mutation name($session: SessionInput!) { updateSession(session: $session) { orgId uuid name link }}","variables":{"session":{"uuid":"[session UUID]","name":"session-renamed","link":"myNewUrl://default"}}}'
+```
 
-`curl 'http://[adobe.io url]/graffias/graphql' -H 'Accept-Encoding: gzip, deflate, br' -H 'Content-Type: application/json' -H 'Accept: application/json' -H 'Connection: keep-alive' -H 'x-gw-ims-org-id: [Organization ID]@AdobeOrg' -H 'x-gw-ims-user-id: [tech account ID]@techacct.adobe.com' -H 'x-api-key: [Client ID]' -H 'Authorization: Bearer [Access Token]' --data-binary --data-binary '{"query":"query {  events(sessionUuid:\"00264086-c771-431c-a55a-d2df9eadb89f\",_page:0,_size:50){    uuid    clientId    timestamp    vendor    type    payload    annotations {      namespace      payload    }  }}"}'`
+### Delete a Session
+
+```
+curl 'https://graffias.adobe.io/graffias/graphql' \
+  -H 'Content-Type: application/json' \
+  -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
+  -H 'x-api-key: [Client ID]' \
+  -H 'Authorization: Bearer [Access Token]' \
+  --data-binary '{"query":"mutation deleteSession($uuid: UUID!) { deleteSession(uuid:$uuid)}"}
+```

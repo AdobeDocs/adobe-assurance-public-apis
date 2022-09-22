@@ -34,16 +34,18 @@ The guide will demonstrate how you can utilize Assurance APIs to programmaticall
 In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations [here](https://jwt.io/).
 
 ## Granting Access
+
 Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Assurance" to those projects.
 
 ## Creating A Project
+
 If you do not already have a project defined in your organization, go ahead and create one "Create new project".
 
 ![Create New Project](images/create_project.png)
 
 ## Adding Assurance API
 
-Within your project home page, click "Add API", filter by "Adobe Experience Platform", and click "Assurance".
+Within your project home page, click "Add API", filter by "Adobe Experience Platform", select "Assurance", then click "Next".
 
 ![Add API](images/add_api.png)
 
@@ -62,7 +64,7 @@ A zip file will be generated and downloaded to your computer. Expand the zip fil
 
 Click "Next".
 Choose applicable Product Profile if requested.
-Click "Save configured" API.
+Click "Save configured API".
 
 ## Generating a JWT (JSON Web Token)
 
@@ -79,6 +81,7 @@ Paste the entire contents of your private key that was downloaded in an earlier 
 Now you should have created/defined:
 
 An access token generated from your unique JSON Web Token
+
 - Client ID
 - Client Secret
 - Technical Account ID
@@ -86,6 +89,7 @@ An access token generated from your unique JSON Web Token
 - Organization ID
 
 ## Regenerating JWT-exchanged Access Tokens
+
 To regenerate an access token, within your project, you can always click on "Credentials / Service Account (JWT)".
 
 Click on "Generate JWT" tab, again paste your private key in the available text box, and choose "Generate Token".
@@ -96,7 +100,7 @@ In this flow, instead of being presented a ready-to-use access token, you will b
 
 Copy and paste the cURL command into your terminal and execute.
 
-An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
+An access token will be returned in your terminal window with a 24 hours expiration period.
 
 
 ## GLOSSARY OF TERMS
@@ -109,4 +113,3 @@ An access token will be returned in your terminal window with an expiration. (ch
 - **JSON Web Token (JWT)**: a method for representing claims securely between two parties
 - **Organization ID**: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
 - **Public/Private Key Pair**: helps to encrypt information that ensures data is protected during transmission
- 
