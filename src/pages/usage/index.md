@@ -2,7 +2,7 @@
 title: Assurance API Usage
 description: Assurance API Usage
 ---
-<Hero slots="heading, text"/> 
+<Hero slots="heading, text"/>
 
 # Assurance API Usage
 
@@ -51,7 +51,6 @@ curl 'http://[adobe.io url]/graffias/graphql'
     -H 'Authorization: Bearer [Access Token]' 
     --data-binary '{"query":"mutation name($session: SessionInput!) {  updateSession(session: $session) {    orgId    uuid    name    link    firstName    lastName    createdById  }}","variables":{"session":{"uuid":"[session UUID]","name":"session-renamed","link":"myNewUrl://default"}}}'
 ```
-
 
 ### Read Session Annotations:
 
