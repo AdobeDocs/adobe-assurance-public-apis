@@ -5,7 +5,7 @@ contributors:
   - https://github.com/coljtob 
 ---
 
-<Hero slots="heading, text"/> 
+<Hero slots="heading, text"/>
 
 # Assurance API
 
@@ -15,7 +15,7 @@ Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 
 #### Resources
 
-* [Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)
+- [Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)
 
 ## Overview
 
@@ -64,7 +64,7 @@ A ZIP file will be generated and downloaded to your computer. Expand the ZIP fil
 
 <!-- Do we have images of this? -->
 
-Select **Next** and, if requested, choose an applicable product profile. 
+Select **Next** and, if requested, choose an applicable product profile.
 
 <!-- Do we have an image of this? --->
 
@@ -117,4 +117,3 @@ An access token will be returned in your terminal window with an expiration. (ch
 - **JSON Web Token (JWT)**: A method for representing claims securely between two parties
 - **Organization ID**: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
 - **Public/Private Key Pair**: Helps to encrypt information that ensures data is protected during transmission
- 
