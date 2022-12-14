@@ -15,14 +15,13 @@ Service which provides GraphQL endpoints for Experience Cloud Assurance Tools.
 
 #### Resources
 
-* [Adobe Experience Platform Assurance](https://aep-sdks.gitbook.io/docs/assurance/project-griffon)
+* [Adobe Experience Platform Assurance](https://developer.adobe.com/client-sdks/documentation/platform-assurance/)
 
 ## Overview
 
-This documentation provides instructions for Assurance 1.0 APIs. For working with Adobe Experience Platform Assurance, see [refer here](https://aep-sdks.gitbook.io/docs/assurance/project-griffon).
+This documentation provides instructions for Assurance 1.0 APIs. For working with Adobe Experience Platform Assurance, please read the [Assurance documentation](https://developer.adobe.com/client-sdks/documentation/platform-assurance/).
 
-The Assurance APIs are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK. 
-When enabled, the user of these APIs will be able to:
+The Assurance APIs are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK. When enabled, the user of these APIs will be able to:
 
 - create, read, and delete sessions
 - read events
@@ -33,80 +32,89 @@ The guide will demonstrate how you can utilize Assurance APIs to programmaticall
 
 In order to make requests into Assurance API, you must create a JSON Web Token (JWT) within the Adobe Developer Console. For further information on use of JWT, you can view helpful docs and explanations [here](https://jwt.io/).
 
-## Granting Access
+## Granting access
+
 Within the [Admin Console](https://adminconsole.adobe.com/), Administrators will have to add new "Developers", and grant each access to "Adobe Experience Platform". With such access, those developers can create other "Projects" within your organization and add "Assurance" to those projects.
 
-## Creating A Project
-If you do not already have a project defined in your organization, go ahead and create one "Create new project".
+## Creating a project
+
+If you do not already have a project defined in your organization, please create one by selecting **Create new project**.
 
 ![Create New Project](images/create_project.png)
 
 ## Adding Assurance API
 
-Within your project home page, click "Add API", filter by "Adobe Experience Platform", and click "Assurance".
+Within your project home page, select **Add API** and filter by **Adobe Experience Platform**.
 
 ![Add API](images/add_api.png)
 
 ![Product Filter](images/product_filter.png)
 
+After filtering for Platform, select **Assurance**.
+
 ![Assurance](images/assurance_api_plugin.png)
 
-## Public-Private Key Pairs
-You will be prompted to generate or upload a public/private key pair. Choose "Generate Key Pair".
+## Public/Private key pairs
 
-![JSON Web Token](images/jwt_account.png)
+You will be prompted to either generate or upload a public/private key pair. Select **Generate Key Pair**.
 
 ![Generate Key Pair](images/generate_keypair.png)
 
-A zip file will be generated and downloaded to your computer. Expand the zip file and copy the entire contents of "private.key" to your clipboard.
+A ZIP file will be generated and downloaded to your computer. Expand the ZIP file and copy the entire contents of "private.key" to your clipboard.
 
-Click "Next".
-Choose applicable Product Profile if requested.
-Click "Save configured" API.
+<!-- Do we have images of this? -->
+
+Select **Next** and, if requested, choose an applicable product profile. 
+
+<!-- Do we have an image of this? --->
+
+Select **Save configured** API after confirming your details.
+
+<!-- Do we have an image of this? --->
 
 ## Generating a JWT (JSON Web Token)
 
-Now with you project defined, and associated with Assurance API, with a public/private key pair, you can generate a JWT.
+After defining your project, associating it with the Assurance API, and generating a public/private key pair, you can generate your JWT.
 
-These JSON Web Tokens can be generated within this UI, or using [several tools/libraries](https://jwt.io/libraries).
+![JSON Web Token](images/jwt_account.png)
 
-Paste the entire contents of your private key that was downloaded in an earlier step into the "Private key" text box.
+A JWT can be generated within the UI or using [several tools/libraries](https://jwt.io/libraries).
+
+If you are generating your JWT within the UI, paste the entire contents of your previously downloaded private key into the "Private key" text box.
 
 ![Paste Private Key](images/paste_key.png)
 
-## Status Check
+## Status check
 
-Now you should have created/defined:
+Now you should have created or defined the following iteas:
 
-An access token generated from your unique JSON Web Token
+- An access token generated from your unique JSON Web Token
 - Client ID
 - Client Secret
 - Technical Account ID
 - Technical Account Email
 - Organization ID
 
-## Regenerating JWT-exchanged Access Tokens
-To regenerate an access token, within your project, you can always click on "Credentials / Service Account (JWT)".
+## Regenerating JWT-exchanged access tokens
 
-Click on "Generate JWT" tab, again paste your private key in the available text box, and choose "Generate Token".
+To regenerate an access token, select **Credentials / Service Account (JWT)** within your project.
 
-In this flow, instead of being presented a ready-to-use access token, you will be presented with your actual JSON Web Token, and a sample cURL command to use that JWT in exchange for an access token.
+Select the **Generate JWT** tab, paste your private key in the text box, and then select **Generate Token**.
+
+To regenerate your access token, copy and paste the **Sample cURL command** into your terminal and execute it. This command will use the generated JWT and exchanges it for an access token.
 
 ![Regenerate Key](images/regenerate.png)
 
-Copy and paste the cURL command into your terminal and execute.
-
 An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
 
-
-## GLOSSARY OF TERMS
+## Glossary
 
 - **Access Token**: An expiring token that must be sent in the header value for 'Authorization' in the form -H 'Authorization: Bearer [access token value]'
 - **Assurance**: The service which provides GraphQL endpoints for Experience Cloud Assurance Tools
-- **Adobe Developer's Console**: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, Runtime functions, and plugin IDs
-- **Client ID**: Identifies which user or entity is gaining access to an Adobe Resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
+- **Adobe Developer Console**: Gives developers access to the tools needed to build with Adobe, including access to APIs, real-time events, runtime functions, and plugin IDs
+- **Client ID**: Identifies which user or entity is gaining access to an Adobe resource, along with an access token, and is passed in the header in the form -H 'x-api-key: [client ID value]'
 - **Client Secret**: Confirms the entity using the Client ID is authorized to do so.
-- **JSON Web Token (JWT)**: a method for representing claims securely between two parties
+- **JSON Web Token (JWT)**: A method for representing claims securely between two parties
 - **Organization ID**: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
-- **Public/Private Key Pair**: helps to encrypt information that ensures data is protected during transmission
+- **Public/Private Key Pair**: Helps to encrypt information that ensures data is protected during transmission
  
