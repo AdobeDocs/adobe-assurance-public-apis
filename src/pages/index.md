@@ -62,15 +62,15 @@ You will be prompted to either generate or upload a public/private key pair. Sel
 
 A ZIP file will be generated and downloaded to your computer. Expand the ZIP file and copy the entire contents of "private.key" to your clipboard.
 
-<!-- Do we have images of this? -->
+![ZIP Download](images/download.png)
 
 Select **Next** and, if requested, choose an applicable product profile.
 
-<!-- Do we have an image of this? --->
+![Product Profile](images/product_profiles.png)
 
 Select **Save configured** API after confirming your details.
 
-<!-- Do we have an image of this? --->
+![Save API](images/save_api.png)
 
 ## Generating a JWT (JSON Web Token)
 
