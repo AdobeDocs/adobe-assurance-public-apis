@@ -23,10 +23,13 @@ This documentation provides instructions for Assurance 1.0 APIs. For working wit
 
 The Assurance APIs are a collection of APIs that empower users to test and debug their web and mobile apps, when outfitted with the Adobe Assurance Mobile SDK. When enabled, the user of these APIs will be able to:
 
-- create, read, and delete sessions
-- read events
-- read event annotations
-- read session annotations
+API Explanation:
+
+- createSession: creates a new Assurance Tools session to which a client will ultimately connect.
+- updateSession: updates session information, like session name or link.
+- sessions (and read annotations): retrieves sessions for a user's organization, along with annotated information.
+- deleteSession: deletes a session within a user's organization.
+- events (and read annotations): reads event data, and annotations, within a given user's session.
 
 The guide will demonstrate how you can utilize Assurance APIs to programmatically connect your Adobe Assurance enabled mobile application to our back end services to help you develop and debug your application.
 
