@@ -47,7 +47,7 @@ If you do not already have a project defined in your organization, please create
 
 ## Adding Assurance API
 
-Within your project home page, select **Add API** and filter by **Adobe Experience Platform**.
+Within your project home page, click "Add API", filter by "Adobe Experience Platform", select "Assurance", then click "Next".
 
 ![Add API](images/add_api.png)
 
@@ -71,7 +71,7 @@ Select **Next** and, if requested, choose an applicable product profile.
 
 ![Product Profile](images/product_profiles.png)
 
-Select **Save configured** API after confirming your details.
+Select **Save configured API** after confirming your details.
 
 ![Save API](images/save_api.png)
 
@@ -108,7 +108,7 @@ To regenerate your access token, copy and paste the **Sample cURL command** into
 
 ![Regenerate Key](images/regenerate.png)
 
-An access token will be returned in your terminal window with an expiration. (check this--24 hours?).
+An access token will be returned in your terminal window with a 24 hours expiration period.
 
 ## Glossary
 
