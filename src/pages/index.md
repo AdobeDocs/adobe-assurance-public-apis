@@ -162,3 +162,6 @@ An access token will be returned in your terminal window with a 24 hours expirat
 - **OAuth2.0**: The industry standard protocol for server-to-server authorization.
 - **Organization ID**: Alpha-numeric value assigned to your Organization, ending in "@AdobeOrg"
 - **Public/Private Key Pair**: Helps to encrypt information that ensures data is protected during transmission
+
+## Further Reading
+- [Adobe Experience Cloud Assurance Tools Public APIs 1.0](https://medium.com/adobetech/adobe-experience-cloud-assurance-tools-public-apis-1-0-b9aeaa309a63)
