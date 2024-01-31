@@ -61,6 +61,8 @@ After filtering for Platform, select **Assurance**.
 
 ## Public/Private key pairs (if choosing JWT)
 
+_Skip this section if you have chosen OAuth2.0 and proceed to "Generating an OAuth2.0 Token"_
+
 You will be prompted to either generate or upload a public/private key pair. Select **Generate Key Pair**.
 
 ![Generate Key Pair](images/generate_keypair.png)
