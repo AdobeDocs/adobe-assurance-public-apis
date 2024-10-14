@@ -12,7 +12,7 @@ cURL command examples for queries/mutations
 
 ### Read Sessions
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -23,7 +23,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Read Session Annotations
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -34,7 +34,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Read Events
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -45,7 +45,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Read Events with Annotations
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -56,7 +56,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Read Plugins
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -69,7 +69,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Create a Session
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -80,7 +80,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Update a Session
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
@@ -91,7 +91,7 @@ curl 'https://graffias.adobe.io/graffias/graphql' \
 
 ### Delete a Session
 
-```
+```text
 curl 'https://graffias.adobe.io/graffias/graphql' \
   -H 'Content-Type: application/json' \
   -H 'x-gw-ims-org-id: [Organization ID]@Adobe.Org' \
