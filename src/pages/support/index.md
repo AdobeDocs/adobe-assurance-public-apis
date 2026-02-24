@@ -2,7 +2,7 @@
 title: Assurance 1.0 API Support
 description: Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 ---
-<Hero slots="heading, text"/> 
+<Superhero slots="heading, text"/>
 
 # Assurance API Support
 

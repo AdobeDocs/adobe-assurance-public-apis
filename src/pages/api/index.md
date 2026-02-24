@@ -3,7 +3,7 @@ title: Assurance API Spec 1.0
 description: Assurance API Spec 1.0
 --- 
 
-<Hero slots="heading, text"/>
+<Superhero slots="heading, text"/>
 
 # Assurance API
 
