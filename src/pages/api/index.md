@@ -23,4 +23,4 @@ curl -i -X POST 'https://graffias.adobe.io/graffias/graphql'
     -d @introspection.json --compressed
 ```
 
-You can download the required "introspection.json" file [here](introspection.json).
+You can download the required "introspection.json" file [here](/adobe-assurance-public-apis/introspection.json).
