@@ -67,5 +67,5 @@ Join our Project Griffon Slack Support Channel.
 ### Stack Overflow
 
 [Tagged questions](https://stackoverflow.com/questions/tagged/adobe-assurance)
-(how to register a tag?)
-Ask/answer developer questions tagged `[adobe-assurance]`.
+
+(how to register a tag?) Ask/answer developer questions tagged `[adobe-assurance]`.
