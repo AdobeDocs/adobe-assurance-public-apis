@@ -5,7 +5,7 @@ contributors:
   - https://github.com/coljtob 
 ---
 
-<Hero slots="heading, text"/>
+<Superhero slots="heading, text"/>
 
 # Assurance API
 

@@ -2,7 +2,7 @@
 title: Assurance 1.0 API Support
 description: Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 ---
-<Hero slots="heading, text"/> 
+<Superhero slots="heading, text"/>
 
 # Assurance API Support
 
@@ -67,5 +67,5 @@ Join our Project Griffon Slack Support Channel.
 ### Stack Overflow
 
 [Tagged questions](https://stackoverflow.com/questions/tagged/adobe-assurance)
-(how to register a tag?)
-Ask/answer developer questions tagged `[adobe-assurance]`.
+
+(how to register a tag?) Ask/answer developer questions tagged `[adobe-assurance]`.

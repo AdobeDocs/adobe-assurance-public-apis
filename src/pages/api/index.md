@@ -3,7 +3,7 @@ title: Assurance API Spec 1.0
 description: Assurance API Spec 1.0
 --- 
 
-<Hero slots="heading, text"/>
+<Superhero slots="heading, text"/>
 
 # Assurance API
 
@@ -23,4 +23,4 @@ curl -i -X POST 'https://graffias.adobe.io/graffias/graphql'
     -d @introspection.json --compressed
 ```
 
-You can download the required "introspection.json" file [here](introspection.json).
+You can download the required "introspection.json" file [here](https://raw.githubusercontent.com/AdobeDocs/adobe-assurance-public-apis/refs/heads/eds-migration/static/introspection.json).

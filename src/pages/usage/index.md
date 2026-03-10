@@ -2,7 +2,7 @@
 title: Assurance API Usage
 description: Assurance API Usage
 ---
-<Hero slots="heading, text"/>
+<Superhero slots="heading, text"/>
 
 # Assurance API Usage
 
