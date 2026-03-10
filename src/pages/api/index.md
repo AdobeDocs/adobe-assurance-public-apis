@@ -23,4 +23,4 @@ curl -i -X POST 'https://graffias.adobe.io/graffias/graphql'
     -d @introspection.json --compressed
 ```
 
-You can download the required "introspection.json" file [here](https://raw.githubusercontent.com/AdobeDocs/adobe-assurance-public-apis/refs/heads/eds-migration/static/introspection.json).
+You can download the required "introspection.json" file [here](https://raw.githubusercontent.com/AdobeDocs/adobe-assurance-public-apis/main/static/introspection.json).
