@@ -1,1 +1,40 @@
-{"total":8,"offset":0,"limit":8,"data":[{"Source":"/adobe-assurance-public-apis","Destination":"/adobe-assurance-public-apis/"},{"Source":"/adobe-assurance-public-apis/index","Destination":"/adobe-assurance-public-apis/"},{"Source":"/adobe-assurance-public-apis/usage","Destination":"/adobe-assurance-public-apis/usage/"},{"Source":"/adobe-assurance-public-apis/usage/index","Destination":"/adobe-assurance-public-apis/usage/"},{"Source":"/adobe-assurance-public-apis/support","Destination":"/adobe-assurance-public-apis/support/"},{"Source":"/adobe-assurance-public-apis/support/index","Destination":"/adobe-assurance-public-apis/support/"},{"Source":"/adobe-assurance-public-apis/api","Destination":"/adobe-assurance-public-apis/api/"},{"Source":"/adobe-assurance-public-apis/api/index","Destination":"/adobe-assurance-public-apis/api/"}],":type":"sheet"}
+{
+  "total": 8,
+  "offset": 0,
+  "limit": 8,
+  "data": [
+    {
+      "Source": "/adobe-assurance-public-apis",
+      "Destination": "/adobe-assurance-public-apis/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/index",
+      "Destination": "/adobe-assurance-public-apis/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/usage",
+      "Destination": "/adobe-assurance-public-apis/usage/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/usage/index",
+      "Destination": "/adobe-assurance-public-apis/usage/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/support",
+      "Destination": "/adobe-assurance-public-apis/support/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/support/index",
+      "Destination": "/adobe-assurance-public-apis/support/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/api",
+      "Destination": "/adobe-assurance-public-apis/api/"
+    },
+    {
+      "Source": "/adobe-assurance-public-apis/api/index",
+      "Destination": "/adobe-assurance-public-apis/api/"
+    }
+  ],
+  ":type": "sheet"
+}
