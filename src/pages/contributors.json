@@ -1,0 +1,48 @@
+{
+  "total": 5,
+  "offset": 0,
+  "limit": 5,
+  "data": [
+    {
+      "page": "/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/15330822?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4",
+        "https://avatars.githubusercontent.com/u/57922?v=4"
+      ],
+      "lastUpdated": "2/24/2026"
+    },
+    {
+      "page": "/api/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/14320591?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4",
+        "https://avatars.githubusercontent.com/u/15330822?v=4",
+        "https://avatars.githubusercontent.com/u/57922?v=4"
+      ],
+      "lastUpdated": "3/10/2026"
+    },
+    {
+      "page": "/config",
+      "avatars": [],
+      "lastUpdated": "2/24/2026"
+    },
+    {
+      "page": "/support/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/15330822?v=4",
+        "https://avatars.githubusercontent.com/u/57922?v=4"
+      ],
+      "lastUpdated": "2/24/2026"
+    },
+    {
+      "page": "/usage/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/15330822?v=4",
+        "https://avatars.githubusercontent.com/u/74737634?v=4"
+      ],
+      "lastUpdated": "2/24/2026"
+    }
+  ],
+  ":type": "sheet"
+}
